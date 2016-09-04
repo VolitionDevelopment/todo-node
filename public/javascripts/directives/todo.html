@@ -1,0 +1,9 @@
+<div class="well">
+    <h3 ng-show="!todo.editMode" ng-click="todo.editMode = true" ng-class="{completed: todo.completed}">{{todo.title}}</h3>
+    <input type="text" class="form-control" ng-model="todo.title" ng-show="todo.editMode" ng-value="todo.title" ng-enter="todo.editMode = false;">
+    <label>
+        Complete:
+        <input type="checkbox" class="form-control" ng-model="todo.completed">
+    </label>
+    <button type="button" class="btn btn-danger btn-block btn-lg" ng-click="remove($index)">Delete</button>
+</div>
